@@ -13,6 +13,7 @@
     justify-content: center;
     gap: 15px;
     margin-top: 15px;
+    text-decoration: none;
 }
 
 .social-links-container a {
