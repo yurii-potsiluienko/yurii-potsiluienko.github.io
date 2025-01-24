@@ -13,6 +13,15 @@ header {
     padding: 40px 20px;
 }
 
+/* Profile Picture */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ddd;
+}
+
 header h1 {
     color: #333;
     font-size: 2.5rem;
