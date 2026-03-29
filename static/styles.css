@@ -69,20 +69,13 @@
     color: #bc2257;
 }
 
-/* Smooth transition */
-body {
-    transition: background-color 0.2s, color 0.2s;
-}
-
-/* Dark mode */
-body.dark {
-    background-color: #121212;
+/* Make the GitHub icon white when in dark mode */
+[data-bs-theme="dark"] .github {
     color: #ffffff;
 }
 
-/* Navbar dark mode */
-body.dark .navbar {
-    background-color: #1f1f1f !important;
+[data-bs-theme="dark"] .github:hover {
+    color: #cccccc;
 }
 
 #theme-toggle {
