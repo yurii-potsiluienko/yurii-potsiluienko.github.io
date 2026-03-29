@@ -84,3 +84,9 @@ body.dark {
 body.dark .navbar {
     background-color: #1f1f1f !important;
 }
+
+#theme-toggle {
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+}
