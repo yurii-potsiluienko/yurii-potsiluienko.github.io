@@ -127,25 +127,45 @@
         </script>
         <!-- Script for light/dark mode -->
         <script>
+            document.addEventListener("DOMContentLoaded", () => {
             const btn = document.getElementById('theme-toggle');
-            // 1. Check saved preference OR system preference
-            const savedTheme = localStorage.getItem('theme');
+            const icon = document.getElementById('theme-icon');
 
-            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            // Set theme based on saved preference or system
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+            
+            if (isDark) {
                 document.body.classList.add('dark');
+                icon.classList.remove('bi-moon');
+                icon.classList.add('bi-sun');
+            } else {
+                icon.classList.remove('bi-sun');
+                icon.classList.add('bi-moon');
             }
 
-            // 2. Button toggle
+            // Toggle on click
             btn.onclick = () => {
-                document.body.classList.toggle('dark');
-                if (document.body.classList.contains('dark')) {
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    localStorage.setItem('theme', 'light');
-                }
-            };
-        </script>
+            document.body.classList.toggle('dark');
+            const darkMode = document.body.classList.contains('dark');
+
+            // Update localStorage
+            localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+
+            // Update icon
+            if (darkMode) {
+                icon.classList.remove('bi-moon');
+                icon.classList.add('bi-sun');
+            } else {
+                icon.classList.remove('bi-sun');
+                icon.classList.add('bi-moon');
+            }
+        };
+    });
+    </script>
         <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
     </body>
 </html>
