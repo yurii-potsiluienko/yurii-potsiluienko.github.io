@@ -83,3 +83,10 @@
     background: transparent;
     font-size: 1.2rem;
 }
+
+/* Dashed border for the 'Coming Soon' project card */
+.border-dashed {
+    border-style: dashed !important;
+    border-width: 2px !important;
+    background-color: transparent !important;
+}
