@@ -28,7 +28,7 @@
                             <a class="nav-link" href="#projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://docs.google.com/document/d/1p-eb2I4ILUb-KOxCs1sWK034Tu-aKmW5aP1S4fLBOms/edit?usp=sharing" target="_blank">Resume</a>
+                            <a class="nav-link dynamic-resume-link" href="#" target="_blank">Resume</a>
                         </li>
                         <li class="nav-item">
                             <button id="theme-toggle" class="btn btn-sm btn-outline-secondary ms-2">
@@ -149,15 +149,19 @@
                 </div>
             </div>
         </section>
-        <section id="resume">
-            <div class="container">
+        
+        <section id="resume" class="py-5 bg-body-tertiary">
+            <div class="container text-center">
                 <h2 class="mb-4">Resume</h2>
-                    <p>
-                        <a href="https://docs.google.com/document/d/1p-eb2I4ILUb-KOxCs1sWK034Tu-aKmW5aP1S4fLBOms/edit?usp=sharing" target="_blank">My resume</a>
-                    </p>
+                <p class="lead mb-4 text-muted">Click below to download my current resume.</p>
+        
+                <a href="#" class="btn btn-primary btn-lg rounded-pill shadow-sm px-5 dynamic-resume-link">
+                    <i class="bi bi-file-earmark-pdf-fill me-2"></i> 
+                    Download resume
+                </a>
             </div>
         </section>
-
+        
         <footer>
             <p class="text-center">© <span id="current-year"></span> Yurii Potsiluienko. All rights reserved.</p>
         </footer>
@@ -198,5 +202,16 @@
         </script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        
+        <script>
+            // Dynamin resume link
+            const myResumeUrl = "https://docs.google.com/document/d/1p-eb2I4ILUb-KOxCs1sWK034Tu-aKmW5aP1S4fLBOms/export?format=pdf";
+            document.addEventListener("DOMContentLoaded", () => {
+                const resumeLinks = document.querySelectorAll('.dynamic-resume-link');
+                resumeLinks.forEach(link => {
+                    link.href = myResumeUrl;
+                });
+            });
+        </script>
     </body>
 </html>
