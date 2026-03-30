@@ -90,3 +90,8 @@
     border-width: 2px !important;
     background-color: transparent !important;
 }
+
+/* Smooth scrolling for all anchor links */
+html {
+    scroll-behavior: smooth;
+}
