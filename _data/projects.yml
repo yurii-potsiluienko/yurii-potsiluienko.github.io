@@ -1,0 +1,46 @@
+- title: "Arduino Nano Sensor Interface PCB"
+  img: "/static/img/arduino-nano-sensor-interface-pcb.png"
+  alt: "Screenshot of the PCB from KiCad PCB"
+  badges:
+    - "KiCad"
+    - "PCB design"
+  description: "A printed circuit board designed for interfacing a heart rate/blood oxygen sensor with an Arduino Nano."
+  link: "https://github.com/yurii-potsiluienko/spo2-kicad-tutorial"
+
+- title: "DC Circuit Solver"
+  img: "/static/img/dc-circuit-solver.png"
+  alt: "Screenshot of DC Circuit Solver interface"
+  badges:
+    - "C"
+    - "Circuit analysis"
+  description: "A C program that solves direct current (DC) electrical circuits."
+  link: "https://github.com/yurii-potsiluienko/dc-circuit-solver"
+
+- title: "Ultrasonic Radar System"
+  img: "/static/img/ultrasonic-radar-system.jpg"
+  alt: "Photo of physical ultrasonic radar setup"
+  badges:
+    - "Arduino"
+    - "C++"
+    - "Sensors"
+    - "Actuators"
+  description: "A radar system utilizing ultrasonic sensors to detect and map surrounding objects."
+  link: "https://github.com/yurii-potsiluienko/ultrasonic-radar-system"
+
+- title: "Brandon's Burn Bags"
+  img: "/static/img/brandons-burn-bags.png"
+  alt: "Screenshot of Brandon's Burn Bags website homepage"
+  badges:
+    - "HTML/CSS"
+    - "Python"
+  description: "A fully functional website developed for a local firewood delivery business."
+  link: "https://www.brandonsburnbags.com/"
+
+- title: "Arduino Snake Game"
+  img: "/static/img/arduino-snake-game.png"
+  alt: "Photo of Arduino LED matrix running Snake game"
+  badges:
+    - "Arduino"
+    - "C++"
+  description: "A hardware implementation of the classic Snake game using an Arduino microcontroller."
+  link: "https://github.com/yurii-potsiluienko/arduino_snake-game"

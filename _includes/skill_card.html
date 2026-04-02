@@ -1,0 +1,11 @@
+<div class="col-md-4">
+  <div class="p-4 border border-secondary-subtle rounded shadow-sm bg-body h-100 text-center">
+    <i class="bi {{ skill.icon }} fs-1 text-primary mb-3"></i>
+    <h4 class="mb-3">{{ skill.category }}</h4>
+    <div class="d-flex flex-wrap justify-content-center gap-2">
+      {% for item in skill.items %}
+        <span class="badge bg-secondary">{{ item }}</span>
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<section id="skills" class="py-5">
+    <div class="container">
+        <h2 class="mb-5 text-center">Technical Skills</h2>
+        <div class="row g-4 text-center">
+            {% for skill in site.data.skills %}
+            {% include skill_card.html skill=skill %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

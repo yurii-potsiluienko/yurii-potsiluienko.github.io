@@ -1,0 +1,28 @@
+- category: "Hardware"
+  icon: "bi-cpu"
+  items:
+    - "Arduino"
+    - "Raspberry Pi"
+    - "Circuit Analysis"
+    - "Sensors & Actuators"
+    - "PCB design"
+
+- category: "Software"
+  icon: "bi-code-slash"
+  items:
+    - "C / C++"
+    - "Python"
+    - "MATLAB"
+    - "Simulink"
+    - "HTML / CSS"
+    - "Git / GitHub"
+
+- category: "Lab & design tools"
+  icon: "bi-tools"
+  items:
+    - "KiCad"
+    - "LTspice"
+    - "Oscilloscope"
+    - "Digital multimeter"
+    - "Function generator"
+    - "Soldering"
