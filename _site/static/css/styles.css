@@ -1,0 +1,97 @@
+/* Profile Picture */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #d8d8d8;
+}
+
+/* Social Links Container */
+.social-links-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.social-links-container a {
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.social-links-container a:hover {
+    transform: scale(1.2); /* Zoom on hover */
+}
+
+/* Email Icon */
+.email {
+    color: #ea4335; /* Google red for email */
+}
+
+.email:hover {
+    color: #c1351d;
+}
+
+/* Platform-Specific Colors */
+.github {
+    color: black;
+}
+
+.github:hover {
+    color: #333;
+}
+
+.linkedin {
+    color: #0077b5;
+}
+
+.linkedin:hover {
+    color: #005582;
+}
+
+.facebook {
+    color: #1877f2;
+}
+
+.facebook:hover {
+    color: #145dbb;
+}
+
+.instagram {
+    color: #e1306c;
+}
+
+.instagram:hover {
+    color: #bc2257;
+}
+
+/* Make the GitHub icon white when in dark mode */
+[data-bs-theme="dark"] .github {
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .github:hover {
+    color: #cccccc;
+}
+
+#theme-toggle {
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+}
+
+/* Dashed border for the 'Coming Soon' project card */
+.border-dashed {
+    border-style: dashed !important;
+    border-width: 2px !important;
+    background-color: transparent !important;
+}
+
+/* Smooth scrolling for all anchor links */
+html {
+    scroll-behavior: smooth;
+}
