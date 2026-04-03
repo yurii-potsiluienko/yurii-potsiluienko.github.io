@@ -1,6 +1,15 @@
+- title: "Water alarm PCB"
+  img: "/static/img/water-alarm-3d.png"
+  alt: "Screenshot of the PCB from KiCad"
+  badges:
+    - "KiCad"
+    - "PCB design"
+  description: "A printed circuit board for a water alarm using a MOSFET-driven buzzer."
+  link: "https://github.com/yurii-potsiluienko/water-alarm-pcb-kicad-tutorial"
+
 - title: "Arduino Nano Sensor Interface PCB"
   img: "/static/img/arduino-nano-sensor-interface-pcb.png"
-  alt: "Screenshot of the PCB from KiCad PCB"
+  alt: "Screenshot of the PCB from KiCad"
   badges:
     - "KiCad"
     - "PCB design"
