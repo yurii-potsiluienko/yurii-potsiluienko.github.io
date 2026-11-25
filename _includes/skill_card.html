@@ -1,7 +1,27 @@
+{% comment %}
+    _includes/skill_card.html
+    ------------------------------------------------------------------
+    The layout of ONE skill category card (e.g. "Hardware").
+    _includes/skills.html repeats this file once for every category in
+    _data/skills.yml, and each time "skill" holds that category's info.
+
+    (Liquid comment: removed when the site is built, so it isn't copied
+    into the page once per card.)
+
+    Bootstrap classes used below:
+      col-md-4         = take 4 of 12 columns (1/3 width) on medium+ screens,
+                         full width on phones
+      p-4              = padding inside the box
+      border, rounded  = thin border with rounded corners
+      h-100            = make all cards in the row the same height
+      fs-1             = very large icon
+{% endcomment %}
 <div class="col-md-4">
   <div class="p-4 border border-secondary-subtle rounded shadow-sm bg-body h-100 text-center">
+    {% comment %} Icon name comes from "icon:" in skills.yml (see https://icons.getbootstrap.com) {% endcomment %}
     <i class="bi {{ skill.icon }} fs-1 text-primary mb-3"></i>
     <h4 class="mb-3">{{ skill.category }}</h4>
+    {% comment %} One grey badge per item in the category's "items" list {% endcomment %}
     <div class="d-flex flex-wrap justify-content-center gap-2">
       {% for item in skill.items %}
         <span class="badge bg-secondary">{{ item }}</span>

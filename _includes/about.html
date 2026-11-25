@@ -1,7 +1,17 @@
+<!--
+    _includes/about.html
+    The "About Me" section. The text itself lives in _data/about_me.yml
+    so you can edit it without touching any HTML.
+-->
+
+<!-- id="about" lets the navbar's "About Me" link (/#about) scroll here -->
 <section id="about">
+    <!-- "container" is a Bootstrap class that centres the content and adds side margins -->
     <div class="container">
+        <!-- "mb-4" = Bootstrap's "margin-bottom, size 4" (space below the heading) -->
         <h2 class="mb-4">About Me</h2>
         <p>
+            <!-- Pulls "description:" from _data/about_me.yml -->
             {{ site.data.about_me.description }}
         </p>
     </div>

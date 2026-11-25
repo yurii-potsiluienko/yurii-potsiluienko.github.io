@@ -1,3 +1,19 @@
+# _data/projects.yml
+# -------------------------------------------------------------------
+# The list of projects shown in the "Projects" section.
+# Each entry starting with "- title:" becomes one card on the page
+# (drawn by _includes/project_card.html), in the same order as below.
+#
+# To add a project, copy one block, paste it, and change the values:
+#   title:       card heading
+#   img:         path to the picture (put image files in static/img/)
+#   alt:         short description of the picture, for screen readers
+#   badges:      list of small tags shown on the card (one per "- " line)
+#   description: one or two sentences about the project
+#   link:        where the "Learn more" button goes (GitHub repo, website...)
+#
+# Indentation matters in YAML: keep the spaces lined up like the examples.
+
 - title: "Water alarm PCB"
   img: "/static/img/water-alarm-3d.png"
   alt: "Screenshot of the PCB from KiCad"

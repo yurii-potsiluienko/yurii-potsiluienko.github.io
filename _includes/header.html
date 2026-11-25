@@ -1,4 +1,15 @@
+<!--
+    _includes/header.html
+    The big intro at the top of the home page: photo, name, tagline, social links.
+-->
+
+<!-- text-center = centre everything; my-4 = margin above and below -->
 <header class="text-center my-4">
+    <!-- Profile photo. The round shape and border come from ".profile-pic"
+         in static/css/styles.css.
+         alt = text read aloud by screen readers / shown if the image fails to load.
+         width/height = reserve space so the page doesn't jump while it loads.
+         fetchpriority="high" = tell the browser to download this image first. -->
     <img src="/static/img/YP_professional_photo.jpg" 
         alt="{{ site.data.about_me.name }}" 
         class="profile-pic"
@@ -6,9 +17,12 @@
         height="150"
         fetchpriority="high">
             
+    <!-- Your name, from _data/about_me.yml -->
     <h1>{{ site.data.about_me.name }}</h1>
     <p>Electrical Engineering Student | Portfolio</p>
             
+    <!-- Social links (same as in the footer). Addresses come from
+         _data/external_links.yml; styling is in static/css/styles.css. -->
     <div class="social-links-container">
         <a href="{{ site.data.external_links.github }}" target="_blank" class="github">
             <i class="bi bi-github"></i>

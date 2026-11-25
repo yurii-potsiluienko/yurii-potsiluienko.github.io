@@ -1,31 +1,61 @@
-/* Profile Picture */
+/* =====================================================================
+   styles.css
+   ---------------------------------------------------------------------
+   Our own custom styles. Most of the look of the site comes from
+   Bootstrap (loaded in _layouts/default.html); this file only adds or
+   overrides a few things.
+
+   Quick CSS reminder:
+     .name    { ... }  styles every element with class="name"
+     #name    { ... }  styles the one element with id="name"
+     a:hover  { ... }  styles a link while the mouse is over it
+   ===================================================================== */
+
+
+/* ---------------------------------------------------------------------
+   Profile picture (the photo in _includes/header.html)
+   --------------------------------------------------------------------- */
 .profile-pic {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #d8d8d8;
+    border-radius: 50%;     /* 50% rounding turns the square photo into a circle */
+    object-fit: cover;      /* crop the photo to fill the circle without stretching it */
+    /* Border colour is a Bootstrap variable, so it automatically
+       switches to a darker grey in dark mode */
+    border: 5px solid var(--bs-border-color);
 }
 
-/* Social Links Container */
+
+/* ---------------------------------------------------------------------
+   Social links (GitHub / LinkedIn / email icons in header and footer)
+   --------------------------------------------------------------------- */
+
+/* The row that holds the icons */
 .social-links-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+    display: flex;              /* place the icons side by side */
+    justify-content: center;    /* centre them horizontally */
+    gap: 15px;                  /* space between icons */
     margin-top: 15px;
     text-decoration: none;
 }
 
+/* Each icon link */
 .social-links-container a {
-    font-size: 2rem;
-    text-decoration: none;
+    font-size: 2rem;            /* icons are a font, so font-size sets their size */
+    text-decoration: none;      /* remove the link underline */
+    /* Animate size and colour changes over 0.3 seconds (used by the hover effect) */
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect */
+/* Hover effect: grow the icon slightly when the mouse is over it */
 .social-links-container a:hover {
     transform: scale(1.2); /* Zoom on hover */
 }
+
+
+/* ---------------------------------------------------------------------
+   Brand colours for each icon (normal colour, then a darker hover colour)
+   --------------------------------------------------------------------- */
 
 /* Email Icon */
 .email {
@@ -46,13 +76,15 @@
 }
 
 .linkedin {
-    color: #0077b5;
+    color: #0077b5;     /* LinkedIn blue */
 }
 
 .linkedin:hover {
     color: #005582;
 }
 
+/* Facebook and Instagram aren't used on the site right now; these are
+   ready in case you add those links later (class="facebook" / "instagram"). */
 .facebook {
     color: #1877f2;
 }
@@ -69,7 +101,9 @@
     color: #bc2257;
 }
 
-/* Make the GitHub icon white when in dark mode */
+/* Make the GitHub icon white when in dark mode
+   (a black icon would be invisible on the dark background).
+   [data-bs-theme="dark"] matches when the <html> tag is in dark mode. */
 [data-bs-theme="dark"] .github {
     color: #ffffff;
 }
@@ -78,20 +112,34 @@
     color: #cccccc;
 }
 
+
+/* ---------------------------------------------------------------------
+   Light/dark mode button in the navbar (id="theme-toggle")
+   --------------------------------------------------------------------- */
 #theme-toggle {
-    border: none;
-    background: transparent;
-    font-size: 1.2rem;
+    border: none;               /* remove Bootstrap's button outline */
+    background: transparent;    /* no background, just the icon */
+    font-size: 1.2rem;          /* slightly bigger icon */
 }
 
-/* Dashed border for the 'Coming Soon' project card */
+
+/* ---------------------------------------------------------------------
+   "More to come..." placeholder card (_includes/projects.html)
+   --------------------------------------------------------------------- */
+/* Dashed border for the 'Coming Soon' project card.
+   "!important" forces these to win over Bootstrap's own card styles. */
 .border-dashed {
     border-style: dashed !important;
     border-width: 2px !important;
     background-color: transparent !important;
 }
 
-/* Smooth scrolling for all anchor links */
+
+/* ---------------------------------------------------------------------
+   Whole page
+   --------------------------------------------------------------------- */
+/* Smooth scrolling for all anchor links
+   (e.g. clicking "Skills" in the navbar glides down instead of jumping) */
 html {
     scroll-behavior: smooth;
 }

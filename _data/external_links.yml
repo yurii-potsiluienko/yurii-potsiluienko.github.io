@@ -1,3 +1,13 @@
+# _data/external_links.yml
+# -------------------------------------------------------------------
+# All the outside links used on the site, kept in one place so that
+# changing a link here updates it everywhere (navbar, header, footer...).
+#
+#   resume_portfolio_view_link: used by the navbar and the Resume section
+#   github / linkedin:          social icons in the header and footer
+#   email:                      must start with "mailto:" so clicking it
+#                               opens the visitor's email app
+
 resume_portfolio_view_link: "https://docs.google.com/document/d/1p-eb2I4ILUb-KOxCs1sWK034Tu-aKmW5aP1S4fLBOms/edit?usp=sharing"
 github: "https://github.com/yurii-potsiluienko/"
 linkedin: "https://www.linkedin.com/in/yurii-potsiluienko/"
