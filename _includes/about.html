@@ -5,13 +5,11 @@
 
 <!-- id="about" is what the navbar link (/#about) scrolls to -->
 <section id="about" class="py-5">
-    <!-- container = bootstrap, centres stuff + adds side margins
-         text-center = centre the text so it matches the other sections -->
-    <div class="container text-center">
+    <!-- container = bootstrap, centres stuff + adds side margins -->
+    <div class="container">
         <!-- mb-4 = margin below -->
         <h2 class="mb-4">About Me</h2>
-        <!-- col-lg-8 mx-auto = 2/3 width on big screens, centred, so lines aren't super long -->
-        <p class="col-lg-8 mx-auto">
+        <p>
             <!-- description from about_me.yml -->
             {{ site.data.about_me.description }}
         </p>
