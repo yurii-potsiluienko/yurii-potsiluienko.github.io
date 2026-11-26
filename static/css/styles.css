@@ -143,3 +143,18 @@
 html {
     scroll-behavior: smooth;
 }
+
+
+/* ---------------------------------------------------------------------
+   Alternating section backgrounds
+   --------------------------------------------------------------------- */
+/* Gives every other <section> (1st, 3rd, 5th...) a lightly tinted,
+   full-width background so each section stands out from the next.
+   Currently that's About Me and Projects. Because this counts sections
+   automatically, the pattern stays correct if you reorder or add sections
+   in index.html.
+   --bs-tertiary-bg is Bootstrap's light grey, which automatically becomes
+   a dark grey in dark mode (the same colour as the navbar and footer). */
+section:nth-of-type(odd) {
+    background-color: var(--bs-tertiary-bg);
+}
