@@ -1,72 +1,52 @@
-/* =====================================================================
-   styles.css
-   ---------------------------------------------------------------------
-   Our own custom styles. Most of the look of the site comes from
-   Bootstrap (loaded in _layouts/default.html); this file only adds or
-   overrides a few things.
-
-   Quick CSS reminder:
-     .name    { ... }  styles every element with class="name"
-     #name    { ... }  styles the one element with id="name"
-     a:hover  { ... }  styles a link while the mouse is over it
-   ===================================================================== */
+/* my custom styles. most of the look is from bootstrap,
+   this just adds/overrides a few things.
+   .name = class="name", #name = id="name", a:hover = link when mouse is over it */
 
 
-/* ---------------------------------------------------------------------
-   Profile picture (the photo in _includes/header.html)
-   --------------------------------------------------------------------- */
+/* --- profile pic (header.html) --- */
 .profile-pic {
     width: 150px;
     height: 150px;
-    border-radius: 50%;     /* 50% rounding turns the square photo into a circle */
-    object-fit: cover;      /* crop the photo to fill the circle without stretching it */
-    /* Border colour is a Bootstrap variable, so it automatically
-       switches to a darker grey in dark mode */
+    border-radius: 50%;     /* makes it a circle */
+    object-fit: cover;      /* crops instead of stretching */
+    /* bootstrap's border colour, changes by itself in dark mode */
     border: 5px solid var(--bs-border-color);
 }
 
 
-/* ---------------------------------------------------------------------
-   Social links (GitHub / LinkedIn / email icons in header and footer)
-   --------------------------------------------------------------------- */
+/* --- social icons (header + footer) --- */
 
-/* The row that holds the icons */
+/* the row of icons */
 .social-links-container {
-    display: flex;              /* place the icons side by side */
-    justify-content: center;    /* centre them horizontally */
-    gap: 15px;                  /* space between icons */
+    display: flex;              /* side by side */
+    justify-content: center;
+    gap: 15px;
     margin-top: 15px;
     text-decoration: none;
 }
 
-/* Each icon link */
 .social-links-container a {
-    font-size: 2rem;            /* icons are a font, so font-size sets their size */
-    text-decoration: none;      /* remove the link underline */
-    /* Animate size and colour changes over 0.3 seconds (used by the hover effect) */
-    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 2rem;            /* icons are a font so font-size = icon size */
+    text-decoration: none;      /* no underline */
+    transition: transform 0.3s ease, color 0.3s ease;   /* smooth hover animation */
 }
 
-/* Hover effect: grow the icon slightly when the mouse is over it */
+/* grow a bit on hover */
 .social-links-container a:hover {
-    transform: scale(1.2); /* Zoom on hover */
+    transform: scale(1.2);
 }
 
 
-/* ---------------------------------------------------------------------
-   Brand colours for each icon (normal colour, then a darker hover colour)
-   --------------------------------------------------------------------- */
+/* --- icon colours (normal + hover) --- */
 
-/* Email Icon */
 .email {
-    color: #ea4335; /* Google red for email */
+    color: #ea4335; /* google red */
 }
 
 .email:hover {
     color: #c1351d;
 }
 
-/* Platform-Specific Colors */
 .github {
     color: black;
 }
@@ -76,15 +56,14 @@
 }
 
 .linkedin {
-    color: #0077b5;     /* LinkedIn blue */
+    color: #0077b5;     /* linkedin blue */
 }
 
 .linkedin:hover {
     color: #005582;
 }
 
-/* Facebook and Instagram aren't used on the site right now; these are
-   ready in case you add those links later (class="facebook" / "instagram"). */
+/* not using facebook/instagram right now, leaving these in case I add them */
 .facebook {
     color: #1877f2;
 }
@@ -101,9 +80,8 @@
     color: #bc2257;
 }
 
-/* Make the GitHub icon white when in dark mode
-   (a black icon would be invisible on the dark background).
-   [data-bs-theme="dark"] matches when the <html> tag is in dark mode. */
+/* github icon white in dark mode, black would be invisible
+   [data-bs-theme="dark"] = when <html> is in dark mode */
 [data-bs-theme="dark"] .github {
     color: #ffffff;
 }
@@ -113,21 +91,16 @@
 }
 
 
-/* ---------------------------------------------------------------------
-   Light/dark mode button in the navbar (id="theme-toggle")
-   --------------------------------------------------------------------- */
+/* --- light/dark button in the navbar --- */
 #theme-toggle {
-    border: none;               /* remove Bootstrap's button outline */
-    background: transparent;    /* no background, just the icon */
-    font-size: 1.2rem;          /* slightly bigger icon */
+    border: none;               /* no outline */
+    background: transparent;    /* just the icon */
+    font-size: 1.2rem;
 }
 
 
-/* ---------------------------------------------------------------------
-   "More to come..." placeholder card (_includes/projects.html)
-   --------------------------------------------------------------------- */
-/* Dashed border for the 'Coming Soon' project card.
-   "!important" forces these to win over Bootstrap's own card styles. */
+/* --- "more to come" card (projects.html) --- */
+/* !important so it beats bootstrap's card styles */
 .border-dashed {
     border-style: dashed !important;
     border-width: 2px !important;
@@ -135,26 +108,18 @@
 }
 
 
-/* ---------------------------------------------------------------------
-   Whole page
-   --------------------------------------------------------------------- */
-/* Smooth scrolling for all anchor links
-   (e.g. clicking "Skills" in the navbar glides down instead of jumping) */
+/* --- whole page --- */
+/* navbar links glide down instead of jumping */
 html {
     scroll-behavior: smooth;
 }
 
 
-/* ---------------------------------------------------------------------
-   Alternating section backgrounds
-   --------------------------------------------------------------------- */
-/* Gives every other <section> (1st, 3rd, 5th...) a lightly tinted,
-   full-width background so each section stands out from the next.
-   Currently that's About Me and Projects. Because this counts sections
-   automatically, the pattern stays correct if you reorder or add sections
-   in index.html.
-   --bs-tertiary-bg is Bootstrap's light grey, which automatically becomes
-   a dark grey in dark mode (the same colour as the navbar and footer). */
+/* --- alternating section backgrounds --- */
+/* every other section (1st, 3rd...) gets a grey background so they're separated.
+   right now that's about me + projects. it counts automatically so it still
+   works if I reorder/add sections.
+   --bs-tertiary-bg = bootstrap grey, goes dark in dark mode (same as navbar/footer) */
 section:nth-of-type(odd) {
     background-color: var(--bs-tertiary-bg);
 }

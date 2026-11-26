@@ -1,14 +1,7 @@
-# _data/skills.yml
-# -------------------------------------------------------------------
-# The skill categories shown in the "Technical Skills" section.
-# Each entry starting with "- category:" becomes one card on the page
-# (drawn by _includes/skill_card.html).
-#
-#   category: card heading
-#   icon:     Bootstrap icon name, find more at https://icons.getbootstrap.com
-#   items:    list of skills shown as grey badges (one per "- " line)
-#
-# Indentation matters in YAML: keep the spaces lined up like the examples.
+# skill categories, each "- category:" block = one card
+# icon names: icons.getbootstrap.com
+# items = grey badges
+# careful with indentation, yaml cares about spaces
 
 - category: "Hardware"
   icon: "bi-cpu"

@@ -1,33 +1,27 @@
 <!--
-    _includes/footer.html
-    The bar at the bottom of every page: social links + copyright.
+    footer: social links + copyright
 -->
 
-<!-- Bootstrap classes used here:
-       bg-body-tertiary = light grey background (adapts to dark mode)
-       py-4             = padding on top and bottom
-       mt-5             = large margin above, to separate it from the content
-       border-top       = thin line along the top edge -->
+<!-- bg-body-tertiary = grey bg (works in dark mode too)
+     py-4 = padding top/bottom, mt-5 = space above, border-top = line on top -->
 <footer class="bg-body-tertiary py-4 mt-5 border-top">
   <div class="container text-center">
-    <!-- Social / contact links. The addresses come from _data/external_links.yml.
-         The colours and hover effect are set in static/css/styles.css. -->
+    <!-- social links. urls are in _data/external_links.yml, colours/hover in styles.css -->
      <div class="social-links-container">
-        <!-- target="_blank" opens the link in a new browser tab -->
+        <!-- target="_blank" = open in new tab -->
         <a href="{{ site.data.external_links.github }}" target="_blank" class="github">
             <i class="bi bi-github"></i>
         </a>
         <a href="{{ site.data.external_links.linkedin }}" target="_blank" class="linkedin">
             <i class="bi bi-linkedin"></i>
         </a>
-        <!-- The email link uses "mailto:", which opens the visitor's email app -->
+        <!-- mailto: opens the email app -->
         <a href="{{ site.data.external_links.email }}" class="email" title="Email">
             <i class="bi bi-envelope"></i>
         </a>
     </div>
 
-    <!-- Copyright line. The empty <span id="current-year"> is filled in
-         with the current year by static/js/main.js. -->
+    <!-- main.js fills in the year in the empty span -->
     <p class="text-muted mb-0">
       © <span id="current-year"></span> Yurii Potsiluienko. All rights reserved.
     </p>

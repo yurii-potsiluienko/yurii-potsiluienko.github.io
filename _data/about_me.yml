@@ -1,11 +1,6 @@
-# _data/about_me.yml
-# -------------------------------------------------------------------
-# Basic info about you. Jekyll makes everything in the _data/ folder
-# available to the HTML files, e.g. "name" below is used as
-# {{ site.data.about_me.name }} in _includes/header.html.
-#
-#   name:        shown as the big heading at the top of the page
-#   description: the text in the "About Me" section (_includes/about.html)
+# basic info, used as {{ site.data.about_me.name }} etc.
+# name = big heading at the top (header.html)
+# description = about me text (about.html)
 
 name: Yurii Potsiluienko
-description: I’m an Electrical Engineering student at Carleton University who is currently working as an Optical Verification Technician at Lumentum.
+description: I am an Electrical Engineering student at Carleton University who is currently working as an Optical Verification Technician at Lumentum.

@@ -1,26 +1,24 @@
 ---
-# The lines between the two dashed lines are called "front matter".
-# They tell Jekyll how to build this page.
-layout: default   # wrap this page in _layouts/default.html
-title: Home       # text shown in the browser tab
+# front matter (between the dashed lines) = settings for jekyll
+layout: default   # uses _layouts/default.html
+title: Home       # browser tab text
 ---
 <!--
-    index.html: the home page (the only page on the site).
-    Each {% include %} line below pulls in a file from the _includes/ folder.
-    To reorder the sections on the page, just reorder these lines.
+    home page. each include pulls a file from _includes/
+    to move sections around just reorder these lines
 -->
 
-<!-- Header: photo, name, and social links (_includes/header.html) -->
+<!-- photo, name, social links -->
 {% include header.html %}
 
-<!-- About me: short bio (_includes/about.html) -->
+<!-- about me -->
 {% include about.html %}
 
-<!-- Skills: skill category cards (_includes/skills.html) -->
+<!-- skills cards -->
 {% include skills.html %}
 
-<!-- Projects: project cards (_includes/projects.html) -->
+<!-- project cards -->
 {% include projects.html %}
 
-<!-- Resume: button linking to the resume (_includes/resume_section.html) -->
+<!-- resume button -->
 {% include resume_section.html %}

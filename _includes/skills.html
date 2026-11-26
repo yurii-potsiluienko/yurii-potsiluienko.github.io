@@ -1,15 +1,13 @@
 <!--
-    _includes/skills.html
-    The "Technical Skills" section: one card per skill category.
-    To change the skills, edit _data/skills.yml, not this file.
+    skills section, one card per category
+    edit _data/skills.yml to change skills
 -->
 <section id="skills" class="py-5">
     <div class="container">
         <h2 class="mb-5 text-center">Technical Skills</h2>
-        <!-- "row" starts a Bootstrap grid row; g-4 = gap between cards -->
+        <!-- row = bootstrap grid row, g-4 = gap -->
         <div class="row g-4 text-center">
-            <!-- Loop over every category in _data/skills.yml and draw a card
-                 for it using _includes/skill_card.html -->
+            <!-- one card per category (layout in skill_card.html) -->
             {% for skill in site.data.skills %}
             {% include skill_card.html skill=skill %}
             {% endfor %}

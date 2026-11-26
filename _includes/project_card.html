@@ -1,35 +1,30 @@
 {% comment %}
-    _includes/project_card.html
-    ------------------------------------------------------------------
-    The layout of ONE project card. _includes/projects.html repeats this
-    file once for every project in _data/projects.yml, and each time
-    "project" holds that project's info (title, img, badges, ...).
+    one project card. projects.html loops through _data/projects.yml and
+    uses this for each one, "project" = the current project's info.
 
-    (This is a Liquid comment instead of an HTML <!-- comment -->.
-    Liquid comments are removed when the site is built, so they don't
-    get copied into the page once per card.)
+    using liquid comments here instead of <!-- --> because those would
+    get copied into the page for every single card. these get removed on build.
 
-    Bootstrap classes used below:
-      col                = one column in the projects grid
-      card, card-body    = Bootstrap's card box and its inner padding
-      h-100              = make every card the same height as its row
-      shadow-sm          = small drop shadow
-      d-flex flex-column = stack the contents vertically
-      mt-auto            = push the button to the bottom of the card
+    col = one column of the grid
+    card / card-body = bootstrap card + padding inside
+    h-100 = all cards same height
+    shadow-sm = small shadow
+    d-flex flex-column = stack things vertically
+    mt-auto = pushes the button to the bottom
 {% endcomment %}
 <div class="col">
   <div class="card h-100 shadow-sm">
     <img src="{{ project.img }}" class="card-img-top project-card-img" alt="{{ project.alt }}">
     <div class="card-body d-flex flex-column">
       <h5 class="card-title">{{ project.title }}</h5>
-      {% comment %} Tags/badges: one small label per item in the project's "badges" list {% endcomment %}
+      {% comment %} one badge for each thing in badges: {% endcomment %}
       <div class="mb-3 d-flex flex-wrap gap-1">
         {% for badge in project.badges %}
           <span class="badge bg-primary bg-opacity-10 text-primary border border-primary-subtle">{{ badge }}</span>
         {% endfor %}
       </div>
       <p class="card-text text-muted">{{ project.description }}</p>
-      {% comment %} Button linking to the project (opens in a new tab) {% endcomment %}
+      {% comment %} link button, new tab {% endcomment %}
       <a href="{{ project.link }}" target="_blank" class="btn btn-outline-primary mt-auto">Learn more <i class="bi bi-box-arrow-up-right"></i></a>
     </div>
   </div>

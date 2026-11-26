@@ -1,30 +1,27 @@
 <!--
-    _includes/navbar.html
-    The menu bar at the top of every page. On small screens (phones) the
-    links collapse into a "hamburger" button; Bootstrap's JavaScript
-    (loaded in _layouts/default.html) handles opening and closing it.
+    navbar at the top. on phones the links turn into the hamburger button,
+    bootstrap's JS (loaded in default.html) does the open/close
 -->
 
-<!-- navbar-expand-lg = show the full menu on large screens, hamburger on smaller ones -->
+<!-- navbar-expand-lg = full menu on big screens, hamburger on small ones -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <!-- container-fluid = stretch the full width of the screen -->
+    <!-- container-fluid = full width -->
     <div class="container-fluid">
-        <!-- Logo on the left -->
+        <!-- logo -->
         <a class="navbar-brand" href="#">
             <img src="/static/img/YP_logo.png" alt="YP" class="logo" height="32" width="32"> 
         </a>
 
-        <!-- Hamburger button (only visible on small screens).
-             data-bs-target="#navbarNav" tells Bootstrap which element to show/hide. -->
+        <!-- hamburger button (small screens only). data-bs-target = what it opens -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- The menu links. This is the element the hamburger button shows/hides. -->
+        <!-- the links (this is what the hamburger shows/hides) -->
         <div class="collapse navbar-collapse" id="navbarNav">
-            <!-- ms-auto = push the links to the right side -->
+            <!-- ms-auto = push links to the right -->
             <ul class="navbar-nav ms-auto">
-                <!-- "/#about" means: go to the home page and scroll to the element with id="about" -->
+                <!-- /#about = home page, scroll to id="about" -->
                 <li class="nav-item">
                     <a class="nav-link" href="/#about">About Me</a>
                 </li>
@@ -34,12 +31,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/#projects">Projects</a>
                 </li>
-                <!-- External link to the resume (address in _data/external_links.yml) -->
+                <!-- resume link (in external_links.yml) -->
                 <li class="nav-item">
                     <a href="{{ site.data.external_links.resume_portfolio_view_link }}" target="_blank" class="nav-link">Resume & Portfolio</a>
                 </li>
-                <!-- Light/dark mode button. What it does when clicked is in static/js/main.js,
-                     which also swaps the icon between moon and sun. -->
+                <!-- light/dark button, the click code is in main.js (also swaps moon/sun) -->
                 <li class="nav-item">
                     <button id="theme-toggle" class="btn btn-sm btn-outline-secondary ms-2">
                         <i id="theme-icon" class="bi bi-moon"></i>
