@@ -2,7 +2,7 @@
 title: Water Alarm
 subtitle:
 summary: A water alarm featuring a custom-designed PCB and a 3D-printed enclosure.
-image: /_static/img/projects/water-alarm-photo.png
+image: /_static/img/projects/water-alarm/water-alarm-photo.png
 skills:
   - KiCad
   - FreeCAD
@@ -11,6 +11,9 @@ skills:
 repo_url: https://github.com/yurii-potsiluienko/water-alarm
 order: 1
 ---
+# Water Alarm
+
+![Photo]({{ '/_static/img/projects/water-alarm/water-alarm-photo.png' | relative_url }})
 
 ## Overview
 
@@ -38,12 +41,12 @@ Created to learn the fundamentals of PCB design in KiCad, build mechanical CAD s
 
 ### Schematic
 
-![Schematic]({{ '/_static/img/projects/schematic.png' | relative_url }})
+![Schematic]({{ '/_static/img/projects/water-alarm/schematic.png' | relative_url }})
 
 ### 3D PCB View
 
-![3D PCB]({{ '/_static/img/projects/3d-pcb.png' | relative_url }})
+![3D PCB]({{ '/_static/img/projects/water-alarm/3d-pcb.png' | relative_url }})
 
 ### Enclosure
 
-![Enclosure]({{ '/_static/img/projects/enclosure.png' | relative_url }})
+![Enclosure]({{ '/_static/img/projects/water-alarm/enclosure.png' | relative_url }})

@@ -27,6 +27,7 @@
   items:
     - "KiCad"
     - "LTspice"
+    - "FreeeCAD"
     - "Oscilloscope"
     - "Digital multimeter"
     - "Function generator"
