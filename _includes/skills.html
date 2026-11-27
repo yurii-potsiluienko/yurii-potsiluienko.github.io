@@ -1,16 +1,20 @@
-<!--
-    skills section, one card per category
-    edit _data/skills.yml to change skills
--->
-<section id="skills" class="py-5">
-    <div class="container">
-        <h2 class="mb-5 text-center">Technical Skills</h2>
-        <!-- row = bootstrap grid row, g-4 = gap -->
-        <div class="row g-4 text-center">
-            <!-- one card per category (layout in skill_card.html) -->
-            {% for skill in site.data.skills %}
-            {% include skill_card.html skill=skill %}
+<section id="skills" class="py-5 border-bottom">
+  <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-baseline gap-1 mb-4">
+    <h2 class="h4 fw-semibold mb-0">Skills</h2>
+  </div>
+
+  <div class="row g-3">
+    {% for group in site.data.skills %}
+      <div class="col-md-4">
+        <div class="surface-card card p-4 h-100">
+          <h3 class="h6 fw-semibold mb-3">{{ group.emoji }} {{ group.category }}</h3>
+          <ul class="list-unstyled text-body-secondary small mb-0 vstack gap-2">
+            {% for item in group.items %}
+              <li>• {{ item }}</li>
             {% endfor %}
+          </ul>
         </div>
-    </div>
+      </div>
+    {% endfor %}
+  </div>
 </section>

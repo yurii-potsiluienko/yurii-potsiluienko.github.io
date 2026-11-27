@@ -1,17 +1,36 @@
-<!--
-    about me section
-    the text is in _data/about_me.yml, edit it there
--->
+<section id="about" class="py-5 border-bottom">
+  <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-baseline gap-1 mb-4">
+    <h2 class="h4 fw-semibold mb-0">About</h2>
+    <span class="text-body-secondary small">{{ site.data.profile.availability }}</span>
+  </div>
 
-<!-- id="about" is what the navbar link (/#about) scrolls to -->
-<section id="about" class="py-5">
-    <!-- container = bootstrap, centres stuff + adds side margins -->
-    <div class="container">
-        <!-- mb-4 = margin below -->
-        <h2 class="mb-4">About Me</h2>
-        <p>
-            <!-- description from about_me.yml -->
-            {{ site.data.about_me.description }}
-        </p>
+  <div class="row g-4">
+    <div class="col-lg-8">
+      <div class="surface-card card p-4 h-100">
+        {% for paragraph in site.data.profile.about_paragraphs %}
+          <p class="text-body-secondary {% if forloop.last %}mb-0{% else %}mb-3{% endif %}">
+            {{ paragraph }}
+          </p>
+        {% endfor %}
+      </div>
     </div>
+
+    <div class="col-lg-4">
+      <div class="surface-card card p-4 h-100">
+        <div class="mono text-body-secondary text-uppercase mb-1" style="font-size: 0.72rem;">
+          Current Focus
+        </div>
+        <div class="fw-semibold mb-3">
+          {{ site.data.profile.focus | default: "Power Electronics & Embedded Systems" }}
+        </div>
+        <hr class="my-3" />
+        <div class="mono text-body-secondary text-uppercase mb-1" style="font-size: 0.72rem;">
+          Lab &amp; Notes
+        </div>
+        <p class="text-body-secondary small mb-0">
+          {{ site.data.profile.notes_summary | default: "Short notes on board bring-up, switching loops, and debugging embedded peripherals." }}
+        </p>
+      </div>
+    </div>
+  </div>
 </section>

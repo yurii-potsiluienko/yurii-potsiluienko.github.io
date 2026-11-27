@@ -1,2 +1,7 @@
 # Generated site
 _site/
+# Jekyll cache
+.jekyll-cache/
+
+# Sass cache
+sass-cache/

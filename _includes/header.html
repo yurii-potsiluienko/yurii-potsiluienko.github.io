@@ -1,34 +1,59 @@
-<!--
-    top of the page: photo, name, tagline, social links
--->
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-md py-2 bg-body-tertiary">
+    <div class="container" style="max-width: 1000px;">
+      <a class="navbar-brand fw-semibold" href="{{ '/' | relative_url }}">
+        {{ site.data.profile.name | default: site.title }}
+      </a>
 
-<!-- text-center = centre everything, my-4 = margin top/bottom -->
-<header class="text-center my-4">
-    <!-- my photo. round shape + border = .profile-pic in styles.css
-         alt = for screen readers / if the image doesn't load
-         width/height = saves the space so the page doesn't jump while loading
-         fetchpriority="high" = load this image first -->
-    <img src="/static/img/YP_professional_photo.jpg" 
-        alt="{{ site.data.about_me.name }}" 
-        class="profile-pic"
-        width="150"
-        height="150"
-        fetchpriority="high">
-            
-    <!-- name from about_me.yml -->
-    <h1>{{ site.data.about_me.name }}</h1>
-    <p>Electrical Engineering Student | Portfolio</p>
-            
-    <!-- same social links as the footer (urls in external_links.yml) -->
-    <div class="social-links-container">
-        <a href="{{ site.data.external_links.github }}" target="_blank" class="github">
-            <i class="bi bi-github"></i>
-        </a>
-        <a href="{{ site.data.external_links.linkedin }}" target="_blank" class="linkedin">
-            <i class="bi bi-linkedin"></i>
-        </a>
-        <a href="{{ site.data.external_links.email }}" class="email" title="Email">
-            <i class="bi bi-envelope"></i>
-        </a>
+      <div class="d-flex align-items-center gap-2 order-md-last">
+        <button
+          id="themeToggleBtn"
+          class="btn btn-outline-secondary border-0 p-2 text-body"
+          type="button"
+          aria-label="Switch to dark mode"
+          title="Switch to dark mode"
+        >
+          <i id="themeToggleIcon" class="bi bi-moon-stars-fill"></i>
+        </button>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+        <ul class="navbar-nav gap-md-3 align-items-md-center pt-2 pt-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/#about' | relative_url }}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/#skills' | relative_url }}">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/#projects' | relative_url }}">Projects</a>
+          </li>
+          {% if site.resume_url %}
+            <li class="nav-item">
+              <a
+                class="nav-link fw-medium text-primary"
+                href="{{ site.resume_url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resume ↗
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
     </div>
+  </nav>
 </header>

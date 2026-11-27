@@ -1,6 +1,0 @@
-# basic info, used as {{ site.data.about_me.name }} etc.
-# name = big heading at the top (header.html)
-# description = about me text (about.html)
-
-name: Yurii Potsiluienko
-description: I am an Electrical Engineering student at Carleton University who is currently working as an Optical Verification Technician at Lumentum.

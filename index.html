@@ -1,24 +1,8 @@
 ---
-# front matter (between the dashed lines) = settings for jekyll
-layout: default   # uses _layouts/default.html
-title: Home       # browser tab text
+layout: default
+title: Home
 ---
-<!--
-    home page. each include pulls a file from _includes/
-    to move sections around just reorder these lines
--->
 
-<!-- photo, name, social links -->
-{% include header.html %}
-
-<!-- about me -->
-{% include about.html %}
-
-<!-- skills cards -->
+{% include hero.html %}
 {% include skills.html %}
-
-<!-- project cards -->
 {% include projects.html %}
-
-<!-- resume button -->
-{% include resume_section.html %}

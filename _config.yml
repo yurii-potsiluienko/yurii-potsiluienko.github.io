@@ -1,0 +1,28 @@
+title: Yurii Potsiluienko — Electrical Engineering
+description: Electrical engineering student portfolio covering power electronics, embedded systems, and PCB design.
+baseurl: "" # Leave empty for username.github.io, or set to "/repo-name" for project pages
+url: "https://yurii-potsiluienko.github.io"
+
+# Keep custom underscore static folder in the built site
+include:
+  - _static
+
+# Main external links
+resume_url: "https://docs.google.com/document/d/1p-eb2I4ILUb-KOxCs1sWK034Tu-aKmW5aP1S4fLBOms/edit?usp=sharing"
+linkedin_url: "https://www.linkedin.com/in/yurii-potsiluienko/"
+github_url: "https://github.com/yurii-potsiluienko/"
+email_address: "yp_work@tuta.io"
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "default"
+
+markdown: kramdown

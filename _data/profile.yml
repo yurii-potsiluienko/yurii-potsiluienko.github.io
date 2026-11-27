@@ -1,0 +1,21 @@
+name: Yurii Potsiluienko
+role: Electrical Engineering Student
+greeting: Hi! I'm Yurii
+tagline: >
+  Electrical engineering student at Carleton University focused on power electronics, PCB design,
+  and embedded firmware. I'm currently working as Optical Verification Technician at Lumentum.
+avatar: /_static/img/profile.jpg
+availability: Open to EE Co-op & Summer Roles
+focus: Power Electronics, 4-Layer PCBs & STM32 Firmware
+notes_summary: >
+  Short bench notes on switching loops, decoupling placement, and debugging
+  serial buses with scopes and logic analyzers.
+about_paragraphs:
+  - >
+    I am an electrical engineering student building hands-on hardware and
+    embedded systems projects. My coursework and lab work center on analog and
+    power circuits, microcontroller peripherals, and board-level testing.
+  - >
+    Before ordering boards, I simulate topologies and transient behavior in
+    LTspice, lay out schematics and PCBs in KiCad, and verify prototypes with
+    oscilloscopes, logic analyzers, and structured firmware tests.

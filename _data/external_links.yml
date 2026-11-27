@@ -1,9 +1,0 @@
-# all outside links in one place, change here = changes everywhere
-# resume link -> navbar + resume section
-# github/linkedin -> icons in header + footer
-# email needs "mailto:" in front so it opens the email app
-
-resume_portfolio_view_link: "https://docs.google.com/document/d/1p-eb2I4ILUb-KOxCs1sWK034Tu-aKmW5aP1S4fLBOms/edit?usp=sharing"
-github: "https://github.com/yurii-potsiluienko/"
-linkedin: "https://www.linkedin.com/in/yurii-potsiluienko/"
-email: "mailto:yp_work@tuta.io"

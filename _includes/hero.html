@@ -1,0 +1,67 @@
+<section class="row g-4 align-items-center pb-5 border-bottom">
+  <div class="col-md-4 text-center text-md-start">
+    <img
+      src="{{ site.data.profile.avatar | default: '/_static/img/profile.jpg' | relative_url }}"
+      alt="{{ site.data.profile.name | default: 'Profile photo' }}"
+      class="profile-img rounded-circle"
+    />
+  </div>
+
+  <div class="col-md-8">
+    <!-- Role (commented out)
+    <div class="mono text-primary small text-uppercase mb-2" style="letter-spacing: 0.06em;">
+      {{ site.data.profile.role | default: "Electrical Engineering Student" }}
+    </div>
+    -->
+    <h1 class="h2 fw-semibold mb-3"> 
+      {{ site.data.profile.greeting | default: "Hi, I'm Yurii!" }}
+    </h1>
+    <p class="text-body-secondary mb-4" style="max-width: 56ch;">
+      {{ site.data.profile.tagline }}
+    </p>
+
+    <div class="d-flex flex-wrap gap-2">
+      {% if site.resume_url %}
+        <a
+          class="btn btn-primary social-btn"
+          href="{{ site.resume_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="bi bi-file-earmark-pdf-fill"></i> Resume
+        </a>
+      {% endif %}
+
+      {% if site.linkedin_url %}
+        <a
+          class="btn btn-outline-secondary social-btn"
+          href="{{ site.linkedin_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="bi bi-linkedin"></i> LinkedIn
+        </a>
+      {% endif %}
+
+      {% if site.github_url %}
+        <a
+          class="btn btn-outline-secondary social-btn"
+          href="{{ site.github_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      {% endif %}
+
+      {% if site.email_address %}
+        <a
+          class="btn btn-outline-secondary social-btn"
+          href="mailto:{{ site.email_address }}"
+        >
+          <i class="bi bi-envelope-fill"></i> Email
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>

@@ -4,7 +4,7 @@
 # careful with indentation, yaml cares about spaces
 
 - category: "Hardware"
-  icon: "bi-cpu"
+  emoji: "💡"
   items:
     - "Arduino"
     - "Raspberry Pi"
@@ -13,7 +13,7 @@
     - "PCB design"
 
 - category: "Software"
-  icon: "bi-code-slash"
+  emoji: "💻"
   items:
     - "C / C++"
     - "Python"
@@ -23,7 +23,7 @@
     - "Git / GitHub"
 
 - category: "Lab & design tools"
-  icon: "bi-tools"
+  emoji: "⚒️"
   items:
     - "KiCad"
     - "LTspice"

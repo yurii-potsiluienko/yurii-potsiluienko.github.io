@@ -1,30 +1,12 @@
-<!--
-    projects section (grid of cards)
-    to add/change projects edit _data/projects.yml, not this
--->
+<section id="projects" class="py-5 border-bottom">
+  <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-baseline gap-1 mb-4">
+    <h2 class="h4 fw-semibold mb-0">Projects</h2>
+  </div>
 
-<!-- id="projects" for the navbar link, py-5 = padding top/bottom -->
-<section id="projects" class="py-5">
-    <div class="container">
-        <h2 class="mb-5 text-center">Projects</h2>
-        <!-- cards per row: 1 on phones, 2 on tablets (md), 3 on laptops (lg)
-             g-4 = gap between cards -->
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <!-- one card per project in projects.yml (layout is in project_card.html) -->
-            {% for project in site.data.projects %}
-            {% include project_card.html project=project %}
-            {% endfor %}
-
-            <!-- "more to come" card, always last. dashed border = .border-dashed in styles.css -->
-            <div class="col">
-                <div class="card h-100 shadow-sm border-dashed">
-                    <div class="card-body d-flex flex-column align-items-center justify-content-center text-center text-muted">
-                        <i class="bi bi-tools fs-1 mb-2"></i>
-                        <h5 class="card-title">More to come...</h5>
-                        <p class="card-text">Exciting new projects are currently in the works!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <div class="row g-4">
+    {% assign sorted_projects = site.projects | sort: "order" %}
+    {% for project in sorted_projects %}
+      {% include project-card.html project=project %}
+    {% endfor %}
+  </div>
 </section>
